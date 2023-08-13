@@ -11,7 +11,7 @@ class UsersListView(ListView):
 class UserCreateView(CreateView):
     model = User
     fields = (
-        "name",
+        "username",
         "email",
         "password",
     )
@@ -22,7 +22,7 @@ class UserCreateView(CreateView):
 class UserUpdateView(UpdateView):
     model = User
     fields = (
-        "name",
+        "username",
         "email",
     )
 
