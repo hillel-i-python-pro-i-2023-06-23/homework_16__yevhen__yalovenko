@@ -8,7 +8,7 @@ class HomepageView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         context.update(
-            greeting_text="Welcome! This is Yevhen Yalovenko Django base project.",
+            greeting_text="Welcome! This is Yevhen Yalovenko homework-16 project. Today we learn " "how to admin.",
             #
             title="Home Page",
         )
@@ -23,8 +23,7 @@ class AboutUsView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         context.update(
-            about="This is just base project, but we definitely sooner or later became bigger,"
-                  " more comfortable. Just wait=)",
+            about="Contact info: jenyaya0007@gamil.com",
             #
             title="About us",
         )
