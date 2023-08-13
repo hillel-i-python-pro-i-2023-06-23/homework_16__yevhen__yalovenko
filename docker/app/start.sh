@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # [bash_init]-[BEGIN]
 # Exit whenever it encounters an error, also known as a non–zero exit code.
@@ -21,6 +21,7 @@ make migrate
 
 # Create default superuser.
 make create-admin
+# [init]-[END]
 
 # Run application.
 python manage.py runserver 0.0.0.0:8000
