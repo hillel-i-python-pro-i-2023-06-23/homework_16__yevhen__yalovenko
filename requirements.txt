@@ -1,7 +1,7 @@
 # Core for web.
 django==4.2.4
 # For generate data
-faker==19.2.0
+faker==19.3.0
 # [code_style]-[BEGIN]
 # Pre-commit hook.
 pre-commit==3.3.3
