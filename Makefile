@@ -69,16 +69,14 @@ pre-commit-run-all:
 migrations:
 	@python manage.py makemigrations
 
+
 .PHONY: migrate
 # Migrate
 migrate:
 	@python manage.py migrate
 
+
 .PHONY: create-admin
 # Create admin
 create-admin:
-	@if [ -z "$$(python manage.py shell -c "from django.contrib.auth import get_user_model; User = get_user_model(); print(User.objects.filter(is_superuser=True).exists())")" ]; then \
-		echo "Admin user already exists"; \
-	else \
-		 DJANGO_SUPERUSER_PASSWORD=admin123 python manage.py createsuperuser --user admin --email admin@gmail.com --no-input; \
-	fi
+	@python manage.py create_admin
